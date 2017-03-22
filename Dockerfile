@@ -113,13 +113,7 @@ RUN mkdir -p /tmp/install/ \
     && cd \
     && rm -rf /tmp/install
 
-ENV GPG_KEYS 0B96609E270F565C13292B24C13C70B87267B52D 0BD78B5F97500D450838F95DFE857D9A90D90EC1 F38252826ACD957EF380D39F2F7956BC5DA04B5D
-RUN set -xe \
-    && for key in $GPG_KEYS; do \
-         gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; \
-       done
-
-ENV TZ Asia/Tokyo
+ENV TZ America/Detroit
 ENV HOSTNAME apache22-php440
 
 RUN mkdir -p /tmp/install/
@@ -203,7 +197,7 @@ RUN mkdir -p /tmp/install/ \
 # Create config directory
 RUN mkdir -p /etc/php4/conf.d/ \
     # Set location and timestamp \
-    && echo 'date.timezone = "Asia/Tokyo"\ndate.default_latitude = 34.4549\ndate.default_longitude = 136.7258' > /etc/php4/conf.d/10_timezone.ini \
+    && echo 'date.timezone = "America/Detroit"\ndate.default_latitude = 34.4549\ndate.default_longitude = 136.7258' > /etc/php4/conf.d/10_timezone.ini \
     # \
 # Enable gd lib
 # RUN echo "extension=gd.so" > /etc/php4/conf.d/30_gd.ini
