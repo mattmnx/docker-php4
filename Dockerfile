@@ -197,7 +197,7 @@ RUN mkdir -p /tmp/install/ \
 # Create config directory
 RUN mkdir -p /etc/php4/conf.d/ \
     # Set location and timestamp \
-    && echo 'date.timezone = "America/Detroit"\ndate.default_latitude = 34.4549\ndate.default_longitude = 136.7258' > /etc/php4/conf.d/10_timezone.ini \
+    && echo 'date.timezone = "America/Detroit mkdir -p /tmp/install/ && cd /tmp/install &&"\ndate.default_latitude = 34.4549\ndate.default_longitude = 136.7258' > /etc/php4/conf.d/10_timezone.ini \
     # \
 # Enable gd lib
 # RUN echo "extension=gd.so" > /etc/php4/conf.d/30_gd.ini
